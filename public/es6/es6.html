@@ -1,0 +1,17 @@
+<script>
+/** Spread Operator(펼침연산자) *********************************/
+var arr = ['A', 'B', 'C'];
+var arr2 = arr.slice(); // Deepcopy
+var arr3 = [...arr];
+
+var arr4 = ['a', 'b', ...arr, 'f'];
+console.log(arr4);
+
+
+function hap(...arg) {
+	var sum = 0;
+	for(var v of arg) sum += v;
+	return sum;
+}
+console.log(hap(1, 2, 3, 4, 5));
+</script>

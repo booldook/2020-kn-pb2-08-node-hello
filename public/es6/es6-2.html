@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>let 과 const를 알아보자</title>
+</head>
+<body>
+	<ul>
+		<li>1번</li>
+		<li>2번</li>
+		<li>3번</li>
+		<li>4번</li>
+		<li>5번</li>
+	</ul>
+	<script>
+		// console.log(document.querySelectorAll('ul>li'));
+		// console.log(document.querySelectorAll('ul>li')[2]);
+
+		// $("ul>li").click(function(){});
+		var a = 10;
+		var b = 20;
+		var lists = document.querySelectorAll('ul>li');
+		for(let i=0; i<lists.length; i++) {
+			lists[i].addEventListener("click", function(){
+				console.log(i);
+			});
+		}
+		console.log(window);
+		console.log(this);
+
+		const c = 20;
+		console.log(c);
+	</script>
+</body>
+</html>
