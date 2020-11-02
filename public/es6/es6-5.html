@@ -1,0 +1,68 @@
+<script>
+/** ES6의 iteration (feat. Set(), Map()) *****************/
+
+// ES5의 iteration - for, for~in, forEach(), filter(), map(), each()-jQuery
+// for
+for(var i=0; i<10; i++) {
+	
+}
+
+// for~in
+var arr = [1, 2, 3, 4, 5];
+for(var i in arr) {
+
+}
+
+// forEach
+var arr = [1, 2, 3, 4, 5];
+console.log(arr);
+arr.forEach(function(v, i){
+
+});
+
+// ES6 for~of
+const arr2 = [1, 2, 3, 4, 5];
+for(let v of arr2) {
+	console.log(v);
+}
+
+const obj = {
+	a: 'A',
+	b: 'B',
+	c: 'C',
+	fn: function() {
+
+	}
+}
+obj.a;
+obj['a'];
+for(var i in obj) {
+	console.log(obj[i]);
+}
+
+var arr = ['A', 'B', 'C'];
+var arr3 = new Array('A', 'B', 'C');
+arr.a = 10;
+console.log(arr);
+for(var i in arr) {
+	console.log(arr[i]);
+}
+for(var v of arr) {
+	console.log(v);
+}
+
+console.clear();
+Array.prototype.hello = function(name){
+	console.log('Hello '+name);
+}
+var array = [1, 2, 3, 4, 5];
+for(var i=0; i<array.length; i++) {
+	console.log(i);
+}
+for(var i in array) {
+	console.log(array[i]);
+}
+for(var v of array) {
+	console.log(v);
+}
+</script>

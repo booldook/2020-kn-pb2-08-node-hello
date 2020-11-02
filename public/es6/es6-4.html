@@ -1,0 +1,38 @@
+<script>
+// ES5의 객체 - Literal객체, Constructor객체(생성자객체)
+const obj = {
+	a: 1,
+	b: 2,
+	fn: function() {
+		return this.a + this.b;
+	}
+}
+
+const Hero = function(name) {
+	this.name = name;
+	return this;
+}
+Hero.prototype.fly = function() {
+	console.log(this.name + "이(가) 하늘을 날고 있습니다.");
+}
+
+const superMan = new Hero('슈퍼맨');
+console.log(superMan);
+superMan.fly();
+
+// ES6의 객체-생성자객체
+class Wizard {
+	constructor(name, hp) {
+		this.name = name;
+		this.hp = hp;
+	}
+	attact(enemy) {
+		let damage = Math.floor(Math.random()*100);
+		console.log(enemy+'에게 '+ damage + '의 피해를 주었습니다.');
+	}
+}
+
+const myWizard = new Wizard('마법사', 1000);
+console.log(myWizard);
+myWizard.attact('오크추장');
+</script>

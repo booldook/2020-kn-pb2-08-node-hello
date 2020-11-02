@@ -1,0 +1,16 @@
+<script>
+/** 구조분해 할당(비구조화 할당) ********************/
+const Man = {
+	fname: '길동',
+	lname: '홍',
+	fullName: function() {
+		return lname + fname;
+	}
+}
+
+var { fname, lname, fullName } = Man;
+console.log(fname);
+console.log(lname);
+console.log(fullName);
+
+</script>
