@@ -65,4 +65,32 @@ for(var i in array) {
 for(var v of array) {
 	console.log(v);
 }
+
+console.clear()
+// Set, Map
+const set = new Set();
+// console.log(set);
+set.add('A');
+set.add('B');
+set.add('A');
+set.add(function(){});
+console.log(set);
+
+const lotto = new Set();
+for(var i=0; lotto.size<6; i++) {
+	lotto.add(Math.ceil(Math.random()*45));
+}
+console.log(lotto);
+
+for(var i of lotto.values()) {
+	console.log(i);
+}
+
+// Map
+var human = new Map();
+human.set('name', '홍길동');
+human.set('age', 25);
+for(var [i, k] of human.entries()) {
+	console.log(i, k);
+}
 </script>
