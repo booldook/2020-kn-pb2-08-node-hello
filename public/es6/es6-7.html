@@ -1,0 +1,77 @@
+<script>
+	// 배열->배열, 객체->객체, 배열->객체, 객체->배열(X)
+	var arr = [1, 2, 3, 4, 5];
+	var arr2 = [...arr];
+	var obj = { ...arr };
+	var obj2 = { ...obj };
+	console.log(arr2, obj2);
+	// var arr3 = [...obj]; 객체를 배열에 펼치는건 안됨
+
+	function sum(a, b) {
+		return a + b;
+	}
+	
+	function sum2() {
+		return arguments[0] + arguments[1];
+	}
+	
+	function sum3(...arg) {
+		return arg[0] + arg[1];
+	}
+
+	console.log(sum(1, 2));
+	console.log(sum2(1, 2));
+	console.log(sum3(1, 2));
+
+	// ES5
+	function animate(a, b, c, d) {
+		console.log(arguments);
+		var ani = null;
+		var speed = 400;
+		var motion = "swing";
+		var cb = null;
+
+		ani = a;
+		if(typeof b == "number") speed = b;
+		else if(typeof b == "string") motion = b;
+		else if(typeof b == "function") cb = b;
+		
+		if(typeof c == "string") motion = c;
+		else if(typeof c == "function") cb = c;
+
+		if(typeof d == "function") cb = d;
+		console.log(ani, speed, motion, cb);
+	}
+
+	animate({"left": "100px"}, 500, "linear", function(){});
+	animate({"left": "100px"}, 500);
+	animate({"left": "100px"}, "linear");
+	animate({"left": "100px"}, function(){});
+	animate({"left": "100px"}, 500, "linear");
+	animate({"left": "100px"}, 500, function(){});
+	animate({"left": "100px"}, "linear", function(){});
+	animate({"left": "100px"});
+
+
+	// ES6
+	function animate2(ani, speed=400, motion="swing", cb=null) {
+		if(typeof speed == "string") {
+			motion = speed;
+			speed = 400;
+		}
+		if(typeof motion == "function") {
+			cb = motion;
+			motion = "swing";
+		}
+		console.log(ani, speed, motion, cb);
+	}
+
+	animate2({"left": "100px"}, 500, "linear", function(){});
+	animate2({"left": "100px"}, 500);
+	animate2({"left": "100px"}, "linear");
+	animate2({"left": "100px"}, function(){});
+	animate2({"left": "100px"}, 500, "linear");
+	animate2({"left": "100px"}, 500, function(){});
+	animate2({"left": "100px"}, "linear", function(){});
+	animate2({"left": "100px"});
+</script>

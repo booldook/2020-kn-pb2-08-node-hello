@@ -1,7 +1,7 @@
 {
   "name": "08.node-hello",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -22,6 +22,7 @@
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.6"
   }
 }
