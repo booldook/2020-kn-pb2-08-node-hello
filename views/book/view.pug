@@ -12,17 +12,16 @@ html(lang="ko")
 				h1= title.body
 					hr
 					small.pl-3= title.small
-			table.my-3.table.table-hover.table-bordered.text-center
-				thead.thead-dark
-					tr
-						th 번호
-						th 제목
-						th 저자
-						th 내용
-				tbody
-					each v in lists
-						tr
-							td= v.id
-							td.text-left= v.title
-							td= v.writer
-							td.text-left= v.content
+			.view-wrapper
+				.img-wrap
+					img.w-100(src=`/img/byul.jpg`)
+				ul.cont-wrap
+					li.list
+						.title 제목
+						.content 제목입니다.
+					li.list
+						.title 저자
+						.content 토끼
+				.detail-wrap 거북이가 토끼를...
+			.bt-wrapper.py-3.text-center
+				button.btn.btn-primary 리스트

@@ -1,0 +1,29 @@
+doctype html
+html(lang="ko")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title= title.head
+		link(rel="stylesheet" href="/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/css/index.css")
+	body
+		.wrapper.container
+			.title.jumbotron
+				h1= title.body
+					hr
+					small.pl-3= title.small
+			table.my-3.table.table-hover.table-bordered.text-center
+				thead.thead-dark
+					tr
+						th 번호
+						th 제목
+						th 저자
+						th 내용
+				tbody
+					each v in lists
+						tr
+							td= v.id
+							td.text-left
+								a(href=`/book/${v.id}`)= v.title
+							td= v.writer
+							td.text-left= v.content

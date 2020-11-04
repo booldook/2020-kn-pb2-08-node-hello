@@ -1,7 +1,10 @@
 @use 'color';
+@use 'dim';
 
 html, body {color: color.$defaultColor;}
 small {color: color.$secondColor;}
+a, a:hover {color: inherit;}
+
 .act {color: color.$accentColor;}
 
 .slide-wrapper {
@@ -37,6 +40,43 @@ small {color: color.$secondColor;}
 .flex-wrap2 {
 	@extend %defFlex;
 }
+
+
+.view-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: dim.$sectionPadding;
+	margin: dim.$sectionMargin;
+	border: color.$sectionBorder;
+	.img-wrap {
+		flex: 40% 0 0;
+		padding-right: 2rem;
+	}
+	.cont-wrap {
+		flex: 60% 0 0;
+		.list {
+			display: flex;
+			border-bottom: color.$sectionBorder;
+			.title {
+				flex: 20% 0 0;
+				font-weight: bold;
+				padding: 1em;
+			}
+			.content {
+				flex: 80% 0 0;
+				padding: 1em;
+			}
+		}
+	}
+	.detail-wrap {
+		flex: 100% 0 0;
+		margin-top: 1rem;
+		padding: 1rem;
+		border-top: color.$sectionBorder;
+	}
+}
+
 
 
 

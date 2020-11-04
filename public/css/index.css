@@ -6,6 +6,10 @@ small {
   color: #777;
 }
 
+a, a:hover {
+  color: inherit;
+}
+
 .act {
   color: #06f;
 }
@@ -32,4 +36,39 @@ small {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.view-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 2rem;
+  border: 1px solid #ccc;
+}
+.view-wrapper .img-wrap {
+  flex: 40% 0 0;
+  padding-right: 2rem;
+}
+.view-wrapper .cont-wrap {
+  flex: 60% 0 0;
+}
+.view-wrapper .cont-wrap .list {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.view-wrapper .cont-wrap .list .title {
+  flex: 20% 0 0;
+  font-weight: bold;
+  padding: 1em;
+}
+.view-wrapper .cont-wrap .list .content {
+  flex: 80% 0 0;
+  padding: 1em;
+}
+.view-wrapper .detail-wrap {
+  flex: 100% 0 0;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
 }
