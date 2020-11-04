@@ -39,11 +39,12 @@ a, a:hover {
 }
 
 .view-wrapper {
+  font-size: 1.25em;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1rem;
-  margin: 2rem;
+  margin: 2rem auto;
   border: 1px solid #ccc;
 }
 .view-wrapper .img-wrap {
