@@ -1,0 +1,43 @@
+@use 'color';
+
+html, body {color: color.$defaultColor;}
+.act {color: color.$accentColor;}
+
+.slide-wrapper {
+	.stage {
+		overflow: hidden;
+		.slide-wrap {
+			position: relative;
+			display: flex;
+			.slide {
+				flex: 25% 0 0;
+			}
+		}
+	}
+}
+
+@mixin flex($hori, $vert) {
+	display: flex;
+	justify-content: $hori;
+	align-items: $vert;
+}
+
+%defFlex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.flex-wrap {
+	@include flex(space-between, center);
+}
+
+.flex-wrap2 {
+	@extend %defFlex;
+}
+
+
+
+
+

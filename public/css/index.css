@@ -1,0 +1,31 @@
+html, body {
+  color: #ccc;
+}
+
+.act {
+  color: #06f;
+}
+
+.slide-wrapper .stage {
+  overflow: hidden;
+}
+.slide-wrapper .stage .slide-wrap {
+  position: relative;
+  display: flex;
+}
+.slide-wrapper .stage .slide-wrap .slide {
+  flex: 25% 0 0;
+}
+
+.flex-wrap2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
