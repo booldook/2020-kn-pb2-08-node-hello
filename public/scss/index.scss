@@ -1,6 +1,7 @@
 @use 'color';
 
 html, body {color: color.$defaultColor;}
+small {color: color.$secondColor;}
 .act {color: color.$accentColor;}
 
 .slide-wrapper {

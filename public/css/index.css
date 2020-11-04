@@ -1,5 +1,9 @@
 html, body {
-  color: #ccc;
+  color: #333;
+}
+
+small {
+  color: #777;
 }
 
 .act {
