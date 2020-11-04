@@ -20,11 +20,16 @@ app.use('/', express.static(path.join(__dirname, './public')));
 app.get('/sample', (req, res) => {
 	const pug = {
 		title: {
-			head: 'PUG 연습',
-			body: 'PUG를 연습해 보자',
-			small: 'PUG 첫시간'
+			head: '도서 리스트',
+			body: '고전소설 도서 목록',
+			small: '작자 미상의 고전 소설'
 		},
+		lists: [
+			{id: 1, title: '별주부전', writer: '겁없는 토끼', content: '용왕의 사주를 받은 거북이가 나를.'},
+			{id: 2, title: '심청전', writer: '심청이 아빠', content: '내딸이 가출을...'},
+			{id: 3, title: '춘향전', writer: '변사또', content: '춘향이와 이몽룡이 눈이 맞아...'},
+		]
 	};
-	res.render('sample');
+	res.render('sample', pug);
 });
 

@@ -3,15 +3,15 @@ html(lang="ko")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		title PUG테스트~
+		title= title.head
 		link(rel="stylesheet" href="/css/bootstrap.min.css")
 		link(rel="stylesheet" href="/css/index.css")
 	body
 		.wrapper.container
 			.title.jumbotron
-				h1 제목입니다.~~~
+				h1= title.body
 					hr
-					small.pl-3 Test
+					small.pl-3= title.small
 			table.my-3.table.table-hover.table-bordered.text-center
 				thead.thead-dark
 					tr
@@ -20,8 +20,9 @@ html(lang="ko")
 						th 저자
 						th 내용
 				tbody
-					tr
-						td 1
-						td.text-left 별주부전
-						td 날렵한 토끼
-						td.text-left 거북이가 나의 간을...
+					each v in lists
+						tr
+							td= v.id
+							td.text-left= v.title
+							td= v.writer
+							td.text-left= v.content
