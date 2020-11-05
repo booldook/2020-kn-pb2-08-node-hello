@@ -1,0 +1,11 @@
+@use 'color';
+@use 'dim';
+
+header.header {
+	background-color: color.$darkBg;
+	color: color.$lightColor;
+	padding: 1em;
+	.fa.fa-bars {float: right;}
+}
+
+.titlebar {margin: 1em auto;}

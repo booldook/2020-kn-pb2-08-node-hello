@@ -1,0 +1,12 @@
+header.header {
+  background-color: #333;
+  color: #f8f8f8;
+  padding: 1em;
+}
+header.header .fa.fa-bars {
+  float: right;
+}
+
+.titlebar {
+  margin: 1em auto;
+}
