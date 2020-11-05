@@ -52,3 +52,10 @@ app.get('/book/:id', (req, res) => {
 	res.render('book/view', pug);
 });
 
+app.get('/test', (req, res) => {
+	const pug = {
+		css: 'default',
+		js: 'default'
+	}
+	res.render('test/list.pug', pug);
+});
