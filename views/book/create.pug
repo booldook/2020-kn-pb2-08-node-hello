@@ -1,7 +1,7 @@
 extends ../layout/layout-book.pug
 block content
 	form(method="post" action="/book/save")
-		ul.send-wrapper
+		ul.send-wrapper.border.rounded.p-4
 			li.list
 				.title 제목
 				.content
@@ -14,6 +14,6 @@ block content
 				.title 간추린 내용
 				.content
 					textarea.form-control(name="content" placeholder="도서 내용을 입력하세요.")
-		.text-center.my-3
-			button.btn.btn-primary 등록
-			button.btn.btn-danger(type="reset") 다시작성
+			li.text-center.my-3
+				button.btn.btn-primary 등록
+				button.btn.btn-danger(type="reset") 다시작성

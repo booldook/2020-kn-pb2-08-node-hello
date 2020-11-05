@@ -99,6 +99,26 @@ header.header {
 
 .titlebar {margin: 1em auto;}
 
+.send-wrapper {
+	.list {
+		display: flex;
+		margin: 1em 0;
+		border: color.$lightBorder;
+		.title {
+			flex: 18% 0 0;
+			margin-right: 2%;
+			padding: 1%;
+			font-weight: bold;
+			background-color: color.$lightBg;
+		}
+		.content {
+			flex: 80% 0 0;
+			padding: 0.5em;
+			textarea {height: 100px;}
+		}
+	}
+}
+
 
 
 

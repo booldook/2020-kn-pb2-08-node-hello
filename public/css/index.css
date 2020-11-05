@@ -100,3 +100,23 @@ header.header .navi-wrap .navi {
 .titlebar {
   margin: 1em auto;
 }
+
+.send-wrapper .list {
+  display: flex;
+  margin: 1em 0;
+  border: 1px solid #dee2e6;
+}
+.send-wrapper .list .title {
+  flex: 18% 0 0;
+  margin-right: 2%;
+  padding: 1%;
+  font-weight: bold;
+  background-color: #eee;
+}
+.send-wrapper .list .content {
+  flex: 80% 0 0;
+  padding: 0.5em;
+}
+.send-wrapper .list .content textarea {
+  height: 100px;
+}
