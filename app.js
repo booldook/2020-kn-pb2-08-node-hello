@@ -21,6 +21,9 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 app.locals.pretty = true;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 /** 라우터 *******************************/
 app.use('/', express.static(path.join(__dirname, './public')));
 app.get(['/book', '/book/list'], (req, res) => {
@@ -63,6 +66,10 @@ app.get('/book/create', (req, res) => {
 		},
 	}
 	res.render('book/create', pug);
+});
+
+app.post('/book/save', (req, res) => {
+	console.log(req);
 });
 
 
