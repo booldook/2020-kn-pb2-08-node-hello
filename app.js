@@ -25,6 +25,8 @@ app.locals.pretty = true;
 app.use('/', express.static(path.join(__dirname, './public')));
 app.get('/list', (req, res) => {
 	const pug = {
+		css: 'index',
+		js: 'index',
 		title: {
 			head: '도서 리스트',
 			body: '고전소설 도서 목록',
@@ -38,6 +40,8 @@ app.get('/list', (req, res) => {
 app.get('/book/:id', (req, res) => {
 	const book = books.filter(v => v.id == req.params.id);
 	const pug = {
+		css: 'index',
+		js: 'index',
 		title: {
 			head: '도서 상세보기',
 			body: book[0].title,

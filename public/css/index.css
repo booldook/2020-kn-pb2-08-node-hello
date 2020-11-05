@@ -1,3 +1,9 @@
+ol, ul, li, p, div, h1, h2, h3, h4, h5, h6, header, section, article, aside, footer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   color: #333;
 }
@@ -72,4 +78,25 @@ a, a:hover {
   margin-top: 1rem;
   padding: 1rem;
   border-top: 1px solid #ccc;
+}
+
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #f8f8f8;
+}
+header.header .logo {
+  padding: 0.75em 1em;
+}
+header.header .navi-wrap {
+  display: flex;
+}
+header.header .navi-wrap .navi {
+  padding: 0.75em 1em;
+}
+
+.titlebar {
+  margin: 1em auto;
 }
