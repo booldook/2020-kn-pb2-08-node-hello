@@ -69,7 +69,10 @@ app.get('/book/create', (req, res) => {
 });
 
 app.post('/book/save', (req, res) => {
-	console.log(req);
+	const { title, writer, content } = req.body;
+	const id = books[books.length - 1].id + 1;
+	books.push({ id, title, writer, content });
+	res.redirect('/book');
 });
 
 
